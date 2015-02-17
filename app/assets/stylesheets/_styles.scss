@@ -1,0 +1,23 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:900);
+
+body {
+  font-family: Arial;
+}
+
+h1 {
+  font-size: 120px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.header {
+  padding-top: 15px;
+  text-align: center;
+
+  span {
+    font-weight: bold;
+  }
+}
+a,
+a:hover {
+  color: #e50a08;
+}

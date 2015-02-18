@@ -5,5 +5,20 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    - description = 'A compilation of the best austerity advice on the planet.'
+    - title = 'Good Fucking Austerity Advice'
+    - url = 'http://www.goodfuckingausterityadvice.com/'
+    %meta{:name => 'description', :content => description}
+    -# Open graph social share meta tags
+    %meta{:property => 'og:title', :content => title}
+    %meta{:property => 'og:type', :content => 'website'}
+    %meta{:property => 'og:url', :content => url}
+    %meta{:property => 'og:description', :content => description}
+
+    %meta{:property => 'twitter:card', :content => 'summary'}
+    %meta{:property => 'twitter:site', :content => '@good_faa'}
+    %meta{:property => 'twitter:title', :content => title}
+    %meta{:property => 'twitter:description', :content => description}
+    %meta{:property => 'twitter:url', :content => url}
   %body
     = yield

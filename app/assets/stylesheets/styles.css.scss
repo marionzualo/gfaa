@@ -5,8 +5,14 @@
 @import 'vendor/skeleton';
 
 .fucking-advice {
-  font-size: 120px;
+  font-size: 70px;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+@media (min-width: 600px) {
+  .fucking-advice {
+    font-size: 120px;
+  }
 }
 
 .header {

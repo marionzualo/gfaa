@@ -5,6 +5,9 @@
 
 %h1= "#{advice.text}."
 - new_advice_id = random_advice_id(advice.id)
-= link_to('This isn’t enough, I need more fucking advice.', advice_path(new_advice_id), :class => 'more-advice')
+= link_to("This isn't enough, I need more advice.", advice_path(new_advice_id), :class => 'more-advice')
 .about
-  = link_to('About', 'https://github.com/marionzualo/gfaa')
+  .link
+    = link_to('I want to suggest advice.', new_advice_path)
+  .link
+    = link_to('About', 'https://github.com/marionzualo/gfaa')

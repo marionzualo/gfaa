@@ -1,0 +1,37 @@
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:900);
+@import url(//fonts.googleapis.com/css?family=Raleway:400,700);
+
+@import 'vendor/normalize';
+@import 'vendor/skeleton';
+
+.fucking-advice {
+  font-size: 120px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.header {
+  padding-top: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d3d3d3;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.more-advice,
+.more-advice:hover {
+  color: #e50a08;
+}
+
+.navigation {
+  margin-top: 30px;
+  text-align: center;
+  padding-bottom: 30px;
+
+  .separator {
+    padding: 0 10px;
+  }
+}

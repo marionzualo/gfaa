@@ -1,15 +1,17 @@
-.header
-  %span
-    Good Fucking Austerity Advice
-  ='- Serving the working class policy maker since 2008.'
+= render partial: 'header'
+.container
+  %h2 I want to suggest advice
+  %p Here you can suggest a good fucking austerity advice to add to this website.
+  %p These suggestions will be reviewed and published only if appropriate. Some tips:
+  %ul
+    %li It should be connected with the theme: good fucking austerity advice;
+    %li it should not be long.
+  %p Thank you for suggesting!
 
-%h2 I want to suggest advice
-%p Here you can suggest a good fucking austerity advice to add to this website.
-%p These suggestions will be reviewed and published in this website only if appropriate. Some tips:
-%ul
-  %li It should be connected with the theme: good fucking austerity advice;
-  %li it should not be long.
-
-= form_for @advice, url: {action: 'create'} do |advice|
-  = advice.text_field :text
-  = advice.submit 'Suggest'
+  = form_for @advice, url: {action: 'create'} do |form|
+    .row
+      .two-thirds.column
+        = form.label :text, 'Advice'
+        = form.text_field :text, :class => 'u-full-width', :required => ''
+        = form.submit 'Suggest', :class => 'button-primary'
+= render partial: 'navigation'

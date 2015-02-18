@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   helper_method :random_advice_id
 
   def random_advice_id(other_id = nil)
-    chain = Advice.order('RANDOM()')
+    chain = Advice.order('RANDOM()').where(:state => 'accepted')
     chain = chain.where('id != (?)', other_id) if other_id.present?
 
     chain.first.id

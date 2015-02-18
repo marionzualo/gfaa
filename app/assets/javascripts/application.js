@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function(){
+  $('a.more-advice').on('ajax:success', function(_event, data) {
+    $('#fucking-advice').text(data.text);
+    var newRandomAdviceURL = $(this).attr('href').replace(/(id=)(\d+)/, '$1' + data.id);
+    $(this).attr('href', newRandomAdviceURL);
+  });
+});
+

@@ -4,6 +4,7 @@
   ='- Serving the working class policy maker since 2008.'
 
 %h1= "#{advice.text}."
-= link_to('This isn’t enough, I need more fucking advice.', root_path(:id => advice.id), :class => 'more-advice')
+- new_advice_id = random_advice_id(advice.id)
+= link_to('This isn’t enough, I need more fucking advice.', advice_path(new_advice_id), :class => 'more-advice')
 .about
   = link_to('About', 'https://github.com/marionzualo/gfaa')

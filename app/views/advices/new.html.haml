@@ -1,4 +1,4 @@
-= render partial: 'header'
+= render partial: 'shared/header'
 .container
   %h2 I want to suggest advice
   %p Here you can suggest a good fucking austerity advice to add to this website.
@@ -14,4 +14,4 @@
         = form.label :text, 'Advice'
         = form.text_field :text, :class => 'u-full-width', :required => ''
         = form.submit 'Suggest', :class => 'button-primary'
-= render partial: 'navigation'
+= render partial: 'shared/navigation'

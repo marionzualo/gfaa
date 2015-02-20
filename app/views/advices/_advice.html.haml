@@ -1,0 +1,6 @@
+= render partial: 'shared/header'
+
+.container
+  %h1#fucking-advice.fucking-advice= advice.text
+  = link_to("This isn't enough, I need more advice.", random_advices_path(:id => advice.id), :class => 'more-advice', :remote => true)
+= render partial: 'shared/navigation'

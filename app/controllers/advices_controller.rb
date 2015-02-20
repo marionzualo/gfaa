@@ -6,9 +6,7 @@ class AdvicesController < ApplicationController
   end
 
   def show
-    advice = Advice.find(params[:id])
-
-    render :json => advice
+    @advice = Advice.find(params[:id])
   end
 
   def random

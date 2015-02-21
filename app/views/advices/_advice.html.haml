@@ -1,6 +1,23 @@
 = render partial: 'shared/header'
+- content_for(:meta_social) do
+  - description = advice.text
+  - title = 'Good Fucking Austerity Advice'
+  - url = advice_url(:id => advice.id)
 
+  %meta{:property => 'og:title', :content => title}
+  %meta{:property => 'og:type', :content => 'website'}
+  %meta{:property => 'og:url', :content => url}
+  %meta{:property => 'og:description', :content => description}
+
+  %meta{:property => 'twitter:card', :content => 'summary'}
+  %meta{:property => 'twitter:site', :content => '@good_faa'}
+  %meta{:property => 'twitter:title', :content => title}
+  %meta{:property => 'twitter:description', :content => description}
+  %meta{:property => 'twitter:url', :content => url}
 .container
   %h1#fucking-advice.fucking-advice= advice.text
   = link_to("This isn't enough, I need more advice.", random_advices_path(:id => advice.id), :class => 'more-advice', :remote => true)
+  .social
+    %span{:class => 'st_twitter', :st_title => "#{advice.text} - #{advice_url(:id => advice.id)} #austerity"}
+    %span{:class => 'st_facebook'}
 = render partial: 'shared/navigation'

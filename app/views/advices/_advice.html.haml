@@ -4,15 +4,15 @@
   - site_title = 'Good Fucking Austerity Advice'
   - url = advice_url(:id => advice.id)
 
-  %meta{:property => 'og:title', :content => site_title}
+  %meta{:property => 'og:title', :content => advice_text}
   %meta{:property => 'og:type', :content => 'website'}
   %meta{:property => 'og:url', :content => url}
-  %meta{:property => 'og:description', :content => advice_text}
+  %meta{:property => 'og:description', :content => site_title}
 
   %meta{:property => 'twitter:card', :content => 'summary'}
   %meta{:property => 'twitter:site', :content => '@good_faa'}
-  %meta{:property => 'twitter:title', :content => advice_text }
-  %meta{:property => 'twitter:description', :content => site_title}
+  %meta{:property => 'twitter:title', :content => site_title}
+  %meta{:property => 'twitter:description', :content => advice_text}
   %meta{:property => 'twitter:url', :content => url}
 .container
   %h1#fucking-advice.fucking-advice= advice.text
